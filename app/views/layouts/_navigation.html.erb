@@ -1,0 +1,19 @@
+<%# navigation styled for Bootstrap 3.0 %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header navbar-right">
+	  <% if current_user %>
+		<span class='navbar-brand'>Logged in as <%= current_user.username %></span>
+		<%= link_to "Log Out", logout_path, class: 'navbar-brand' %>
+		<% if current_user.role == 'admin' %>
+			<%= link_to "Admin", users_path, class: 'navbar-brand' %>
+		<% end %>
+	  <% end %>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <%= render 'layouts/navigation_links' %>
+      </ul>
+    </div>
+  </div>
+</nav>

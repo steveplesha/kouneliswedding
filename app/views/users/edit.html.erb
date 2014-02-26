@@ -1,0 +1,80 @@
+<h1>Edit guest information</h1>
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+				<%= f.label "FirstName1" %>
+				<%= f.text_field :firstname1 %>
+			</div>
+			<div class="field">
+				<%= f.label "LastName1" %>
+				<%= f.text_field :lastname1 %>
+			</div>
+		</div>
+			<div class="field">
+				<%= f.label "FirstName2" %>
+				<%= f.text_field :firstname2 %>
+			</div>
+			<div class="field">
+				<%= f.label "LastName2" %>
+				<%= f.text_field :lastname2 %>
+			</div>  
+		</div>
+
+		<div class="field">
+			<%= f.label "Username" %>
+			<%= f.text_field :username %>
+		</div>
+		<div class="field">
+			<%= f.label "Password" %>
+			<%= f.text_field :password %>
+		</div>   
+		<div class="field">
+			<%= f.label "Maxguests" %>
+			<%= f.number_field :maxguests %>
+		</div>
+		<div class="field">
+			<%= f.label "Numguests" %>
+			<%= f.number_field :numguests %>
+			</div>
+		<div class="field">
+			<%= f.label "RSVP'd" %>
+			<%= f.text_field :respond %>
+		</div>
+		<div class="field">
+			<%= f.label "Ceremony" %>
+			<%= f.text_field :ceremony %>
+		</div>
+		<div class="field">
+			<%= f.label "Reception" %>
+			<%= f.text_field :reception %>
+		</div>  
+		<div class="field">
+			<%= f.label "Comment" %>
+			<%= f.text_field :comment %>
+		</div>
+		<div class="field">
+			<%= f.label "Role" %>
+			<%= f.text_field :role %>
+		</div>
+		<br />		
+		<div class="actions">
+			<%= f.submit "Update Guest", class: 'submit' %>
+		</div>
+
+<% end %>
+<br />
+
+<%= link_to 'Delete Guest', user_path(@user), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+
+
