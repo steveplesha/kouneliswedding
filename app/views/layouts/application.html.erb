@@ -4,11 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Guest Tracker" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Guest Tracker" %>">
-    <%= stylesheet_link_tag "application", media: "all" %>
-
+    <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBn_HpdNIc1k9xfy-jVZGxD3KTLW2D5DCA&sensor=false"></script>    
+	<%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
-
     <%= csrf_meta_tags %>
+	<style type="text/css">
+		html { height: 100% }
+		body { height: 100%; margin: 0; padding: 0 }
+		#map-canvas { height: 100% }
+	</style>
   </head>
   <body>
     <header>

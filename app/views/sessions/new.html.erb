@@ -1,18 +1,37 @@
 <div class="container-fluid">
     <%= render 'layouts/messages' %>
     <div class="row-fluid">
-        <div class="col-md-4"><%= image_tag('Tree.jpg') %></div>	   
-		<div id="login" class="col-md-8">
+		<div id="myCarousel" class="col col-md-4 carousel slide">
+			<ol class="carousel-indicators">
+				<li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>				
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active"><%= image_tag("johnandstef.jpg", alt:"John and Stefanie") %></div>
+				<div class="item"><%= image_tag("johnandstef2.jpg", alt:"John and Stefanie") %></div>
+				<div class="item"><%= image_tag("jands3.jpg", alt:"John and Stefanie") %></div>
+				<div class="item"><%= image_tag("jands4.jpg", alt:"John and Stefanie") %></div>				
+			</div>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="icon-prev"></span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="icon-next"></span>
+			</a>
+		</div>		   
+		<div id="login" class="col col-md-5">
 			<div id="login">
-				<h1>Enter your username and password</h1>
+				<h1 class="invite-text">Enter your username and password</h1>
 				<%= form_tag sessions_path do %>
 
 					<p>
-						<%= label_tag :username %><br />
+						<%= label_tag :username, "Username", class:"invite-text" %><br />
 						<%= text_field_tag :username, params[:username] %>
 					</p>
 					<p>
-						<%= label_tag :password %><br />
+						<%= label_tag :password, "Password", class:"invite-text" %><br />
 						<%= password_field_tag :password %>
 					</p>
 					<p class="button"><%= submit_tag "Login", class: 'submit' %></p>

@@ -43,16 +43,43 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #EFE8D6;
+  background: #EFE8D6 url("../assets/tree-bkg.png") 100% no-repeat;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
+  min-height: 1000px;
   }
+
+
+ .carousel-indicators {
+	bottom: 0;
+}
+
+.carousel-indicators .active {
+	background-color: #fff
+}
+
+.carousel-indicators li {
+	border-color: #f;
+}
+  
 section {
   @extend .row;
   margin-top: 20px;
   }
+  
+label {
+  font-size: 20px;
+} 
 
 input[type="radio"] {
   margin: 4px 0 0 20px;
 }
+
+.invite-text {
+  font-family: 'Parisienne', cursive;
+ }
+ 
+
+ 
+ 

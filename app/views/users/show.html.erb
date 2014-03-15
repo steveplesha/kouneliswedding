@@ -1,14 +1,35 @@
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="col-md-4"><%= image_tag('Tree.jpg') %></div>	   
-		<div id="login" class="col-md-8">
-			<h1><p class="label-question">
+        
+		<div id="myCarousel" class="col col-md-4 carousel slide auto">
+			<ol class="carousel-indicators">
+				<li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>				
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active"><%= image_tag("johnandstef.jpg", alt:"John and Stefanie") %></div>
+				<div class="item"><%= image_tag("johnandstef2.jpg", alt:"John and Stefanie") %></div>
+				<div class="item"><%= image_tag("jands3.jpg", alt:"John and Stefanie") %></div>
+				<div class="item"><%= image_tag("jands4.jpg", alt:"John and Stefanie") %></div>				
+			</div>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="icon-prev"></span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="icon-next"></span>
+			</a>
+		</div>	   
+		
+		<div id="login" class="col col-md-6">
+			<h1><p class="invite-text">
 				<% if @user.lastname1 == @user.lastname2 %>
-					<%= "Hello, #{@user.firstname1} and #{@user.firstname2} #{@user.lastname1}!" %>
+					<%= "Dear #{@user.firstname1} and #{@user.firstname2} #{@user.lastname1}," %>
 				<% elsif @user.firstname2.empty? %>
-					<%= "Hello, #{@user.firstname1} #{@user.lastname1}!" %>
+					<%= "Dear #{@user.firstname1} #{@user.lastname1}," %>
 				<% else %>
-					<%= "Hello, #{@user.firstname1} #{@user.lastname1} and #{@user.firstname2} #{@user.lastname2}!" %>
+					<%= "Dear #{@user.firstname1} #{@user.lastname1} and #{@user.firstname2} #{@user.lastname2}," %>
 				<% end %>
 			</p></h1>  
   
@@ -24,14 +45,17 @@
 						</ul>
 					</div>
 				<% end %>
+				
+				<p class="invite-text">Please join us for a celebration of love, friendship, laughter, and family as<br />Johnny Flanagin<br />and<br />Sefanie Camplan</br>join hands in matrimony on<br />October Fourth, Two Thousand Fourteen!</p>
+				<p class="invite-text">11224 Durbin Place<br>Crown Point, Indiana 46303<br>Reception to follow</p>
 				<% if @user.maxguests > 0 %>
 					<div class="field">
-						<%= f.label "Number of guests coming with you:" %>
-						<%= f.number_field :numguests, max: @user.maxguests, min: 0, class: 'label-question'  %>
+						<%= f.label "Number of guests coming with you:", class: "invite-text" %>
+						<%= f.number_field :numguests, max: @user.maxguests, min: 0 %>
 					</div>
 				<% end %>
 
-				<div>
+				<div class="invite-text">
 					<%= f.label 'ceremony', "Will #{@user.firstname1} be coming to the ceremony?" %><br />
 					<%= f.radio_button :ceremony, 1 %>
 					<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
