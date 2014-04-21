@@ -22,8 +22,8 @@
 			</a>
 		</div>	   
 		
-		<div id="login" class="col col-md-6">
-			<h1><p class="invite-text">
+		<div class= "invite-text center-text col col-md-6">
+			<h1 class="invite-text">
 				<% if @user.lastname1 == @user.lastname2 %>
 					<%= "Dear #{@user.firstname1} and #{@user.firstname2} #{@user.lastname1}," %>
 				<% elsif @user.firstname2.empty? %>
@@ -31,7 +31,7 @@
 				<% else %>
 					<%= "Dear #{@user.firstname1} #{@user.lastname1} and #{@user.firstname2} #{@user.lastname2}," %>
 				<% end %>
-			</p></h1>  
+			</h1>  
   
 			<%= form_for @user do |f| %>
 				<% if @user.errors.any? %>
@@ -51,7 +51,7 @@
 				<% if @user.maxguests > 0 %>
 					<div class="field">
 						<%= f.label "Number of guests coming with you:", class: "invite-text" %>
-						<%= f.number_field :numguests, max: @user.maxguests, min: 0 %>
+						<%= f.number_field :numguests, max: @user.maxguests, min: 0, class: 'initial-text' %>
 					</div>
 				<% end %>
 
@@ -89,7 +89,7 @@
 				<% end %>				
 				<div>
 					<%= f.label "Any comments?" %><br />
-					<%= f.text_area :comment, rows: 5, cols: 55, placeholder: "Enter comments here..." %>
+					<%= f.text_area :comment, rows: 5, cols: 55, placeholder: "Enter comments here...", class: 'initial-text' %>
 				</div>
 				<%= f.hidden_field :respond, value: true %>
 				<div class="form-actions">
