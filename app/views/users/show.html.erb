@@ -1,28 +1,10 @@
-<div class="container-fluid">
+<% if @user.role == "admin" %>
+    <%= button_to "Admin", users_path, class: 'admin-btn', method: :get %>
+<% end %>
+<div class="pad-bottom container-fluid">
     <div class="row-fluid">
         
-		<div id="myCarousel" class="col col-md-4 carousel slide auto">
-			<ol class="carousel-indicators">
-				<li class="active" data-target="#myCarousel" data-slide-to="0"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>				
-			</ol>
-			<div class="carousel-inner">
-				<div class="item active"><%= image_tag("johnandstef.jpg", alt:"John and Stefanie") %></div>
-				<div class="item"><%= image_tag("johnandstef2.jpg", alt:"John and Stefanie") %></div>
-				<div class="item"><%= image_tag("jands3.jpg", alt:"John and Stefanie") %></div>
-				<div class="item"><%= image_tag("jands4.jpg", alt:"John and Stefanie") %></div>				
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<span class="icon-prev"></span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-				<span class="icon-next"></span>
-			</a>
-		</div>	   
-		
-		<div class= "invite-text center-text col col-md-6">
+		<div class= "invite-text center-text col col-md-6 col-md-offset-3">
 			<h1 class="invite-text">
 				<% if @user.lastname1 == @user.lastname2 %>
 					<%= "Dear #{@user.firstname1} and #{@user.firstname2} #{@user.lastname1}," %>
@@ -93,7 +75,7 @@
 				</div>
 				<%= f.hidden_field :respond, value: true %>
 				<div class="form-actions">
-					<%= f.submit 'Click to RSVP', class:'submit' %>
+					<%= f.submit 'Click to RSVP', class:'submit initial-text' %>
 				</div>
 			<% end %>			
 		</div>

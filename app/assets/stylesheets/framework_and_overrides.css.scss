@@ -5,10 +5,10 @@
 img {
   @extend .img-responsive;
   margin: 0 auto;
-  box-shadow: 8px 8px 10px rgba(82, 74, 74, 0.47);
+          box-shadow: 8px 8px 10px rgba(82, 74, 74, 0.47);
   -webkit-box-shadow: 8px 8px 10px rgba(82, 74, 74, 0.47);
-  -moz-box-shadow: 8px 8px 10px rgba(82, 74, 74, 0.47);
-  -o-box-shadow: 8px 8px 10px rgba(82, 74, 74, 0.47);
+     -moz-box-shadow: 8px 8px 10px rgba(82, 74, 74, 0.47);
+       -o-box-shadow: 8px 8px 10px rgba(82, 74, 74, 0.47);
   }
   
 .navbar {
@@ -39,30 +39,23 @@ img {
   @extend .btn-primary;
   @extend .btn-lg;
   }
+
 // apply styles to HTML elements
 // to make views framework-neutral
+
 main {
   @extend .container;
-  background: #EFE8D6 url("../assets/tree-bkg.png") 100% no-repeat;
-  padding-bottom: 80px;
+ // background: #EFE8D6 url("../assets/tree-bkg.png") 100% no-repeat;
+  background-color: #efe8d6;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-image: url("../assets/tree-bkg.png");
+  background-size: 100%;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
-  min-height: 1000px;
+  min-height: 775px;
   }
 
 
- .carousel-indicators {
-	bottom: 0;
-}
-
-.carousel-indicators .active {
-	background-color: #fff
-}
-
-.carousel-indicators li {
-	border-color: #f;
-}
-  
 section {
   @extend .row;
   margin-top: 20px;
@@ -72,16 +65,20 @@ label {
   font-size: 20px;
 } 
 
-input[type="radio"] {
+input[type="radio"],
+input[type="number"] {
   margin: 4px 0 0 20px;
 }
 
-.invite-text {
-  font-family: 'Parisienne', cursive;
- }
+input[type="text"],
+input[type="number"] { padding-left: 10px; }
+
+.invite-text { font-family: 'Parisienne', cursive; }
 
 .initial-text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
  
+#guest-admin input[type="text"],
+#guest-admin input[type="number"] {
+    width: 200px; 
+}
 
- 
- 

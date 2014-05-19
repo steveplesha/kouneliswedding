@@ -1,27 +1,8 @@
 <div class="container-fluid">
     <%= render 'layouts/messages' %>
     <div class="row-fluid">
-		<div id="myCarousel" class="col col-md-4 carousel slide">
-			<ol class="carousel-indicators">
-				<li class="active" data-target="#myCarousel" data-slide-to="0"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>				
-			</ol>
-			<div class="carousel-inner">
-				<div class="item active"><%= image_tag("johnandstef.jpg", alt:"John and Stefanie") %></div>
-				<div class="item"><%= image_tag("johnandstef2.jpg", alt:"John and Stefanie") %></div>
-				<div class="item"><%= image_tag("jands3.jpg", alt:"John and Stefanie") %></div>
-				<div class="item"><%= image_tag("jands4.jpg", alt:"John and Stefanie") %></div>				
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<span class="icon-prev"></span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-				<span class="icon-next"></span>
-			</a>
-		</div>		   
-		<div class="center-text col col-md-5">
+	   
+		<div class="login center-text col col-md-5 col-md-offset-3">
 			<div>
 				<h1 class="invite-text">Enter your username and password</h1>
 				<%= form_tag sessions_path do %>

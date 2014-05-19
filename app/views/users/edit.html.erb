@@ -1,4 +1,4 @@
-<div id="guestAdmin">
+<div id="guest-admin">
 	<h1>Edit guest information</h1>
 
 	<%= form_for @user do |f| %>
@@ -12,68 +12,100 @@
 				</ul>
 			</div>
 		<% end %>
-		<div class="field">
-			<%= f.label "FirstName1" %>
-			<%= f.text_field :firstname1 %>
-		</div>
-		<div class="field">
-			<%= f.label "LastName1" %>
-			<%= f.text_field :lastname1 %>
-		</div>
-		<div class="field">
-			<%= f.label "FirstName2" %>
-			<%= f.text_field :firstname2 %>
-		</div>
-		<div class="field">
-			<%= f.label "LastName2" %>
-			<%= f.text_field :lastname2 %>
-		</div>  
-		</div>
-		<div class="field">
-			<%= f.label "Username" %>
-			<%= f.text_field :username %>
-		</div>
-		<div class="field">
-			<%= f.label "Password" %>
-			<%= f.text_field :password %>
-		</div>   
-		<div class="field">
-			<%= f.label "Maxguests" %>
-			<%= f.number_field :maxguests %>
-		</div>
-		<div class="field">
-			<%= f.label "Numguests" %>
-			<%= f.number_field :numguests %>
-			</div>
-		<div class="field">
-			<%= f.label "RSVP'd" %>
-			<%= f.text_field :respond %>
-		</div>
-		<div class="field">
-			<%= f.label "Ceremony" %>
-			<%= f.text_field :ceremony %>
-		</div>
-		<div class="field">
-			<%= f.label "Reception" %>
-			<%= f.text_field :reception %>
-		</div>  
-		<div class="field">
-			<%= f.label "Comment" %>
-			<%= f.text_field :comment %>
-		</div>
-		<div class="field">
-			<%= f.label "Role" %>
-			<%= f.text_field :role %>
-		</div>
-		<br />		
-		<div class="actions">
-			<%= f.submit "Update Guest", class: 'submit' %>
-		</div>
-
-	<% end %>
-	<br />
-
-	<%= link_to 'Delete Guest', user_path(@user), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
-    <%= link_to '<< Back', users_path, class: 'back-link' %>
+        <div class="group">
+            <div class="field">
+                <%= f.label "FirstName1" %>
+                <%= f.text_field :firstname1, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "LastName1" %>
+                <%= f.text_field :lastname1, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "FirstName2" %>
+                <%= f.text_field :firstname2, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "LastName2" %>
+                <%= f.text_field :lastname2, class: "right" %>
+            </div>  
+            <div class="field">
+                <%= f.label "Username" %>
+                <%= f.text_field :username, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "Password" %>
+                <%= f.text_field :password, class: "right" %>
+            </div>   
+            <div class="field">
+                <%= f.label "Maxguests" %>
+                <%= f.number_field :maxguests, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "Numguests" %>
+                <%= f.number_field :numguests, class: "right" %>
+                </div>
+            <div class="field">
+                <%= f.label "RSVP'd" %>
+                <%= f.text_field :respond, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "Ceremony" %>
+                <%= f.text_field :ceremony, class: "right" %>
+            </div>
+            <div class="field">
+				<div>
+					<%= f.label 'ceremony', "Will #{@user.firstname1} be coming to the ceremony?" %><br />
+					<%= f.radio_button :ceremony, 1 %>
+					<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
+					<%= f.radio_button :ceremony, 0 %>
+					<%= label :ceremony_0, "No", class: 'radiolabel' %>
+				</div> 
+				<% if !@user.lastname2.empty? %>
+					<div>
+						<%= f.label 'ceremony', "Will #{@user.firstname2} be coming to the ceremony?" %><br />
+						<%= f.radio_button :ceremony2, 1 %>
+						<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
+						<%= f.radio_button :ceremony2, 0 %>
+						<%= label :ceremony_0, "No", class: 'radiolabel' %>
+					</div> 
+				<% end %>
+				<div>
+					<%= f.label 'reception', "Will #{@user.firstname1} be coming to the reception?" %><br />
+					<%= f.radio_button :reception, 1 %>
+					<%= label :reception_1, "Yes", class: 'radiolabel' %>
+					<%= f.radio_button :reception, 0 %>
+					<%= label :reception_0, "No", class: 'radiolabel' %>
+				</div>  
+				<% if !@user.lastname2.empty? %>
+					<div>
+						<%= f.label 'reception', "Will #{@user.firstname2} be coming to the reception?" %><br />
+						<%= f.radio_button :reception2, 1 %>
+						<%= label :reception_1, "Yes", class: 'radiolabel' %>
+						<%= f.radio_button :reception2, 0 %>
+						<%= label :reception_0, "No", class: 'radiolabel' %>
+					</div>  
+				<% end %>	
+            </div>
+            <div class="field group comment">
+                <%= f.label "Comment" %>
+                <%= f.text_area :comment, rows: 5, cols: 35, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "Role" %>
+                <%= f.text_field :role, class: "right" %>
+            </div>
+            <br />	
+        </div>
+        <div class="guest-update-btn">
+            <div class="actions">
+                <%= f.submit "Update Guest", class: 'submit' %>
+            </div>
+        <% end %>
+        <br />
+    
+        <%= link_to 'Delete Guest', user_path(@user), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+        <%= link_to '<< Back', users_path, class: 'back-link' %>
+        </div>
 
 </div>
