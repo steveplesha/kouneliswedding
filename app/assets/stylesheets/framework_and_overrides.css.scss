@@ -75,10 +75,22 @@ input[type="number"] { padding-left: 10px; }
 
 .invite-text { font-family: 'Parisienne', cursive; }
 
+p.invite-text { font-size: 20px; }
+
 .initial-text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
  
 #guest-admin input[type="text"],
 #guest-admin input[type="number"] {
     width: 200px; 
+}
+
+.login-btn {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.rsvp-btn { 
+    margin-top: 20px;
+    padding: 10px 30px;
 }
 

@@ -22,21 +22,15 @@
 }
 
 
-.center-text {
-	text-align: center;
-}
+.center-text { text-align: center; }
 	
-.login {
-    margin-top: 120px;
-}
+.login { margin-top: 120px; }
 
 .right { float: right; }
 
 .pad-bottom { padding-bottom: 30px; }
 
-.radiolabel {
-	margin-bottom: 3rem;
-}
+.radiolabel { margin-bottom: 3rem; }
 	
 #username, 
 #password  {
@@ -82,7 +76,7 @@
 .radiolabel {
 	font-weight: normal;
  }
- 
+
  #import {
 	border-top: 1px black solid;
 	border-bottom: 1px black solid;
@@ -97,10 +91,7 @@
 	padding: 1em;
 }
 
- 
- #importsubmit {
- 	margin: 0.5em 0 1em 0;
-}
+#importsubmit { margin: 0.5em 0 1em 0; }
 
 #guest-admin {
     margin: 20px 0 0 20px;

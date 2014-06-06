@@ -28,7 +28,7 @@
 					</div>
 				<% end %>
 				
-				<p class="invite-text">Please join us for a celebration of love, friendship, laughter, and family as<br />Johnny Flanagin<br />and<br />Sefanie Camplan</br>join hands in matrimony on<br />October Fourth, Two Thousand Fourteen!</p>
+				<p class="invite-text">Please join us for a celebration of love, friendship, laughter, and family as<br>Johnny Flanagin<br>and<br>Sefanie Camplan<br>join hands in matrimony on<br>October Fourth, Two Thousand Fourteen!</p>
 				<p class="invite-text">11224 Durbin Place<br>Crown Point, Indiana 46303<br>Reception to follow</p>
 				<% if @user.maxguests > 0 %>
 					<div class="field">
@@ -70,12 +70,12 @@
 					</div>  
 				<% end %>				
 				<div>
-					<%= f.label "Any comments?" %><br />
-					<%= f.text_area :comment, rows: 5, cols: 55, placeholder: "Enter comments here...", class: 'initial-text' %>
+					<%= f.label "I promise to dance if you play this song:" %><br />
+					<%= f.text_field :comment, placeholder: "Enter song here...", class: 'initial-text' %>
 				</div>
 				<%= f.hidden_field :respond, value: true %>
 				<div class="form-actions">
-					<%= f.submit 'Click to RSVP', class:'submit initial-text' %>
+					<%= f.submit 'Click to RSVP', class:'rsvp-btn submit initial-text' %>
 				</div>
 			<% end %>			
 		</div>
