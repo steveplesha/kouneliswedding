@@ -44,16 +44,15 @@
             <div class="field">
                 <%= f.label "Numguests" %>
                 <%= f.number_field :numguests, class: "right" %>
+            </div>
+            <div class="field">
+                <div>
+                    <%= f.label "RSVP'd" %>
+                    <%= f.radio_button :respond, true %>
+                    <%= f.label :respond_1, "Yes", class: 'radiolabel' %>
+                    <%= f.radio_button :respond, false %>
+                    <%= f.label :respond_0, "No", class: 'radiolabel' %>
                 </div>
-            <div class="field">
-                <%= f.label "RSVP'd" %>
-                <%= f.text_field :respond, class: "right" %>
-            </div>
-            <div class="field">
-                <%= f.label "Ceremony" %>
-                <%= f.text_field :ceremony, class: "right" %>
-            </div>
-            <div class="field">
 				<div>
 					<%= f.label 'ceremony', "Will #{@user.firstname1} be coming to the ceremony?" %><br />
 					<%= f.radio_button :ceremony, 1 %>

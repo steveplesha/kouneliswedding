@@ -49,7 +49,7 @@ main {
   background-color: #efe8d6;
   background-position: left;
   background-repeat: no-repeat;
-  background-image: url("../assets/tree-bkg.png");
+  background-image: url("../assets/tree-bkg2.png");
   background-size: 100%;
   width: 100%;
   min-height: 775px;
@@ -94,3 +94,27 @@ p.invite-text { font-size: 20px; }
     padding: 10px 30px;
 }
 
+a.btn-primary { margin-top: 5px; }
+
+#guest-admin label { font-weight: normal; }
+
+.map {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.logout-btn {
+    background: linear-gradient(#2C7EF8, #112F7A);
+    color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    position: fixed;
+    right: 60px;
+    border: none;
+    font-size: 1.3em;
+    border-radius: 5px;
+    -webkit-box-shadow: 6px 4px 8px rgba(14, 8, 8, 0.73);
+	   -moz-box-shadow: 6px 4px 8px rgba(14, 8, 8, 0.73);
+	        box-shadow: 6px 4px 8px rgba(14, 8, 8, 0.73);
+    text-decoration: none;
+}

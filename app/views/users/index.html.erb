@@ -1,8 +1,10 @@
+<%= link_to "Log Out", logout_path, class: 'logout-btn' %>
 <div id="index">
 
 	<h1>Guests</h1>
 
 	<div id='import'>
+        <%= link_to 'Add user', new_user_path, class: 'btn btn-primary' %>
 		<h3>Import Guest Info</h3>
 		<%= form_tag import_users_path,multipart: true do %>
 		  <%= file_field_tag :file %>
