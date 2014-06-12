@@ -30,10 +30,7 @@ class UsersController < ApplicationController
     @logged_in_user = User.find(session[:user_id])
 	
     respond_to do |format|
-      if @user.update_attributes(params[:user]) && @logged_in_user.role == 'admin'
-        format.html { redirect_to users_path, notice: 'Your information has been updated.' }
-        format.json { head :no_content }
-      elsif @user.update_attributes(params[:user])
+      if @user.update_attributes(params[:user])
 	    format.html { redirect_to users_submit_path, notice: 'Your information has been updated.' }
         format.json { head :no_content }
 	  else
