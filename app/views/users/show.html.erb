@@ -53,6 +53,33 @@
 						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
 					</div> 
 				<% end %>
+				<% if !@user.lastname3.empty? %>
+					<div>
+						<%= f.label 'ceremony', "Will #{@user.firstname2} be coming to the ceremony?" %><br />
+						<%= f.radio_button :ceremony3, 1 %>
+						<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
+						<%= f.radio_button :ceremony3, 0 %>
+						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
+					</div> 
+				<% end %>  
+				<% if !@user.lastname4.empty? %>
+					<div>
+						<%= f.label 'ceremony', "Will #{@user.firstname2} be coming to the ceremony?" %><br />
+						<%= f.radio_button :ceremony4, 1 %>
+						<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
+						<%= f.radio_button :ceremony4, 0 %>
+						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
+					</div> 
+				<% end %>
+				<% if !@user.lastname5.empty? %>
+					<div>
+						<%= f.label 'ceremony', "Will #{@user.firstname2} be coming to the ceremony?" %><br />
+						<%= f.radio_button :ceremony5, 1 %>
+						<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
+						<%= f.radio_button :ceremony5, 0 %>
+						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
+					</div> 
+				<% end %>            
 				<div>
 					<%= f.label 'reception', "Will #{@user.firstname1} be coming to the reception?" %><br />
 					<%= f.radio_button :reception, 1 %>

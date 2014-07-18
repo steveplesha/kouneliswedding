@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140224192750) do
+ActiveRecord::Schema.define(:version => 20140717134621) do
 
   create_table "users", :force => true do |t|
     t.string   "username"
@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(:version => 20140224192750) do
     t.string   "comment"
     t.string   "ceremony2"
     t.string   "reception2"
+    t.string   "firstname3"
+    t.string   "lastname3"
+    t.string   "firstname4"
+    t.string   "lastname4"
+    t.string   "firstname5"
+    t.string   "lastname5"
+    t.string   "ceremony3"
+    t.string   "reception3"
+    t.string   "ceremony4"
+    t.string   "reception4"
+    t.string   "ceremony5"
+    t.string   "reception5"
   end
 
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
