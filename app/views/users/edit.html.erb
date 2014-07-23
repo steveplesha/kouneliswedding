@@ -28,7 +28,31 @@
             <div class="field">
                 <%= f.label "LastName2" %>
                 <%= f.text_field :lastname2, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "FirstName3" %>
+                <%= f.text_field :firstname3, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "LastName3" %>
+                <%= f.text_field :lastname3, class: "right" %>
             </div>  
+            <div class="field">
+                <%= f.label "FirstName4" %>
+                <%= f.text_field :firstname4, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "LastName4" %>
+                <%= f.text_field :lastname4, class: "right" %>
+            </div>  
+            <div class="field">
+                <%= f.label "FirstName5" %>
+                <%= f.text_field :firstname5, class: "right" %>
+            </div>
+            <div class="field">
+                <%= f.label "LastName5" %>
+                <%= f.text_field :lastname5, class: "right" %>
+            </div>              
             <div class="field">
                 <%= f.label "Username" %>
                 <%= f.text_field :username, class: "right" %>
@@ -69,6 +93,33 @@
 						<%= label :ceremony_0, "No", class: 'radiolabel' %>
 					</div> 
 				<% end %>
+                <% if !@user.lastname3.empty? %>
+					<div>
+						<%= f.label 'ceremony', "Will #{@user.firstname3} be coming to the ceremony?" %><br />
+						<%= f.radio_button :ceremony3, 1 %>
+						<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
+						<%= f.radio_button :ceremony3, 0 %>
+						<%= label :ceremony_0, "No", class: 'radiolabel' %>
+					</div> 
+				<% end %>
+                <% if !@user.lastname4.empty? %>
+					<div>
+						<%= f.label 'ceremony', "Will #{@user.firstname3} be coming to the ceremony?" %><br />
+						<%= f.radio_button :ceremony4, 1 %>
+						<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
+						<%= f.radio_button :ceremony4, 0 %>
+						<%= label :ceremony_0, "No", class: 'radiolabel' %>
+					</div> 
+				<% end %>                
+                <% if !@user.lastname5.empty? %>
+					<div>
+						<%= f.label 'ceremony', "Will #{@user.firstname3} be coming to the ceremony?" %><br />
+						<%= f.radio_button :ceremony5, 1 %>
+						<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
+						<%= f.radio_button :ceremony5, 0 %>
+						<%= label :ceremony_0, "No", class: 'radiolabel' %>
+					</div> 
+				<% end %>                
 				<div>
 					<%= f.label 'reception', "Will #{@user.firstname1} be coming to the reception?" %><br />
 					<%= f.radio_button :reception, 1 %>
@@ -85,6 +136,33 @@
 						<%= label :reception_0, "No", class: 'radiolabel' %>
 					</div>  
 				<% end %>	
+                <% if !@user.lastname3.empty? %>
+					<div>
+						<%= f.label 'reception', "Will #{@user.firstname2} be coming to the reception?" %><br />
+						<%= f.radio_button :reception3, 1 %>
+						<%= label :reception_1, "Yes", class: 'radiolabel' %>
+						<%= f.radio_button :reception3, 0 %>
+						<%= label :reception_0, "No", class: 'radiolabel' %>
+					</div>  
+                <% end %>
+                <% if !@user.lastname4.empty? %>
+					<div>
+						<%= f.label 'reception', "Will #{@user.firstname2} be coming to the reception?" %><br />
+						<%= f.radio_button :reception4, 1 %>
+						<%= label :reception_1, "Yes", class: 'radiolabel' %>
+						<%= f.radio_button :reception4, 0 %>
+						<%= label :reception_0, "No", class: 'radiolabel' %>
+					</div>  
+				<% end %>	
+				<% if !@user.lastname5.empty? %>
+					<div>
+						<%= f.label 'reception', "Will #{@user.firstname2} be coming to the reception?" %><br />
+						<%= f.radio_button :reception5, 1 %>
+						<%= label :reception_1, "Yes", class: 'radiolabel' %>
+						<%= f.radio_button :reception5, 0 %>
+						<%= label :reception_0, "No", class: 'radiolabel' %>
+					</div>  
+				<% end %>		
             </div>
             <div class="field group comment">
                 <%= f.label "Dance Song" %>
