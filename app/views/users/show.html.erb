@@ -32,8 +32,15 @@
 				<p class="invite-text">Saint John Township Community Center<br>1515 W. Lincoln Highway<br>Schererville, Indiana 46375<br>Reception to follow</p>
 				<% if @user.maxguests > 0 %>
 					<div class="field">
+                        <p class="invite-text">You can bring <%= @user.maxguests %> guests.</p>
 						<%= f.label "Number of guests coming with you:", class: "invite-text" %>
-						<%= f.number_field :numguests, max: @user.maxguests, min: 0, class: 'initial-text' %>
+						<%= f.number_field :numguests, max: @user.maxguests, min: 0, class: 'initial-text', id: "numguests" %>
+                        <% if @user.numguests > 0 %>
+                            <div id="guestnames">
+                                <%= f.label "Name of guests: ", class: "invite-text" %>
+                                <%= f.text_field :guestnames, placeholder: "Enter guest names here", class: "initial-text" %>
+                            </div>
+                        <% end %>
 					</div>
 				<% end %>
 

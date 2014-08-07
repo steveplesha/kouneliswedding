@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 				  :lastname5,    
 				  :maxguests, 
 				  :numguests, 
+                  :guestnames,
 				  :username, 
 				  :password, 
 				  :ceremony, 

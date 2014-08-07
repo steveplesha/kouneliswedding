@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140717134621) do
+ActiveRecord::Schema.define(:version => 20140806170308) do
 
   create_table "users", :force => true do |t|
     t.string   "username"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20140717134621) do
     t.string   "reception4"
     t.string   "ceremony5"
     t.string   "reception5"
+    t.string   "guestnames"
   end
 
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
