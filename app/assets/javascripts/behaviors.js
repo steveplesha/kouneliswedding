@@ -3,6 +3,6 @@ $(function() {
         if ($('#numguests').val() > 0)
             $('#guestnames').show();  
         else 
-            $('#guestnames').hide();
+            $('#guestnames').hide();    
     })
 });
