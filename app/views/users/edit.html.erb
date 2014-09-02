@@ -70,6 +70,10 @@
                 <%= f.number_field :numguests, class: "right" %>
             </div>
             <div class="field">
+                <%= f.label "Guest names" %>
+                <%= f.text_field :guestnames, class: "right" %>
+            </div>
+            <div class="field">
                 <div>
                     <%= f.label "RSVP'd" %>
                     <%= f.radio_button :respond, true %>
