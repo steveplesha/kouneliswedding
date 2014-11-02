@@ -16,19 +16,20 @@ class CreateUsers < ActiveRecord::Migration
       t.string :lastname5         
       t.integer :numguests
       t.integer :maxguests
+      t.string :guestnames
       t.boolean :respond
-      t.role :string
-      t.ceremony :boolean
-      t.reception :boolean
-      t.ceremony2 :boolean
-      t.reception2 :boolean    
-      t.ceremony3 :boolean
-      t.reception3 :boolean  
-      t.ceremony4 :boolean
-      t.reception4 :boolean  
-      t.ceremony5 :boolean
-      t.reception5 :boolean  
-      t.comment :string
+      t.string :role
+      t.boolean :ceremony
+      t.boolean :reception
+      t.boolean :ceremony2
+      t.boolean :reception2
+      t.boolean :ceremony3
+      t.boolean  :reception3
+      t.boolean :ceremony4
+      t.boolean :reception4
+      t.boolean :ceremony5
+      t.boolean :reception5
+      t.string :comment
       
 
       t.timestamps
