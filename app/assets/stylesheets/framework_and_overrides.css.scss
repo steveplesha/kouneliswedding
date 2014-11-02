@@ -45,7 +45,6 @@ img {
 
 main {
   @extend .container;
- // background: #EFE8D6 url("../assets/tree-bkg.png") 100% no-repeat;
   background-color: #efe8d6;
   background-position: left;
   background-repeat: no-repeat;
@@ -66,14 +65,13 @@ label {
 } 
 
 input[type="radio"],
-input[type="number"] {
-  margin: 4px 0 0 20px;
-}
+input[type="number"] { margin: 4px 0 0 20px; }
 
 input[type="text"],
-input[type="number"] { padding-left: 10px; }
+input[type="number"],
+input[type="password"] { padding-left: 10px; }
 
-.invite-text { font-family: 'Parisienne', cursive; }
+.invite-text { font-family: 'Dancing Script', cursive; }
 
 p.invite-text { font-size: 20px; }
 

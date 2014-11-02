@@ -4,33 +4,20 @@
 	   
 		<div class="login center-text col col-md-5 col-md-offset-3">
 			<div>
-				<h1 class="invite-text">Thank you everyone!</h1>
-                <h3 class="invite-text">We'll see you October 4th.</h3>
-                <div class="container-fluid map">
-                    <div class="row-fluid">   
-                      <iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=1515+W.+Lincoln+Highway,+Schererville,+IN+46375&amp;ie=UTF8&amp;hq=&amp;hnear=1515+W+Lincoln+Hwy,+Schererville,+Indiana+46375&amp;gl=us&amp;t=m&amp;z=14&amp;ll=41.490865,-87.481359&amp;output=embed">
-                        </iframe><br />
-                        <small><a class= "submit" href="https://maps.google.com/maps?q=1515+W.+Lincoln+Highway,+Schererville,+IN+46375&amp;ie=UTF8&amp;hq=&amp;hnear=1515+W+Lincoln+Hwy,+Schererville,+Indiana+46375&amp;gl=us&amp;t=m&amp;z=14&amp;ll=41.490865,-87.481359&amp;source=embed" >View Larger Map</a>
-                        </small>
-                    </div>	   
-                </div>
-                
-                
-                <!--<h1 class="invite-text">Enter your username and password</h1>
+                <h1 class="invite-text">Enter your username and password</h1>
 				<%= form_tag sessions_path do %>
 
 					<p>
 						<%= label_tag :username, "Username", class:"invite-text" %><br />
-						<%= text_field_tag :username, params[:username] %>
+						<%= text_field_tag :username, params[:username], class:"text-input" %>
 					</p>
 					<p>
 						<%= label_tag :password, "Password", class:"invite-text" %><br />
-						<%= password_field_tag :password %>
+						<%= password_field_tag :password, nil, class:"text-input" %>
 					</p>
 					<p class="button"><%= submit_tag "Login", class: 'submit login-btn' %></p>
 				<% end %>
-                <p class="invite-text">If you are having issues logging in or need assistance,<br>please contact John at 306-5805</p>
-                -->
+                <p class="invite-text">If you are having issues logging in or need assistance,<br>please contact Paulina at #</p>
                 
             </div>
 		</div>

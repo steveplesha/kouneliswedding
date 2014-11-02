@@ -8,7 +8,7 @@
 			<h1 class="invite-text">
 				<% if @user.lastname1 == @user.lastname2 %>
 					<%= "Dear #{@user.firstname1} and #{@user.firstname2} #{@user.lastname1}," %>
-				<% elsif @user.firstname2.empty? %>
+				<% elsif @user.firstname2.blank? %>
 					<%= "Dear #{@user.firstname1} #{@user.lastname1}," %>
 				<% else %>
 					<%= "Dear #{@user.firstname1} #{@user.lastname1} and #{@user.firstname2} #{@user.lastname2}," %>
@@ -28,7 +28,7 @@
 					</div>
 				<% end %>
 				
-				<p class="invite-text">Please join us for a celebration of love, friendship, laughter, and family as<br>Stefanie Camplan<br>and<br>John Flanagin<br>join hands in matrimony on<br>October Fourth, Two Thousand Fourteen!</p>
+				<p class="invite-text">Please join us for a celebration of love, friendship, laughter, and family as<br>Paulina Kounelis<br>and<br>To Be Named<br>join hands in matrimony on<br>October Fourth, Two Thousand Fourteen!</p>
 				<p class="invite-text">Saint John Township Community Center<br>1515 W. Lincoln Highway<br>Schererville, Indiana 46375<br>Reception to follow</p>
 				<% if @user.maxguests > 0 %>
 					<div class="field">
@@ -51,7 +51,7 @@
 					<%= f.radio_button :ceremony, 0 %>
 					<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
 				</div> 
-				<% if !@user.lastname2.empty? %>
+				<% if !@user.lastname2.blank? %>
 					<div>
 						<%= f.label 'ceremony', "Will #{@user.firstname2} be coming to the ceremony?" %><br />
 						<%= f.radio_button :ceremony2, 1 %>
@@ -60,7 +60,7 @@
 						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
 					</div> 
 				<% end %>
-                <% if !@user.lastname3.empty? %>
+                <% if !@user.lastname3.blank? %>
 					<div>
 						<%= f.label 'ceremony', "Will #{@user.firstname3} be coming to the ceremony?" %><br />
 						<%= f.radio_button :ceremony3, 1 %>
@@ -69,7 +69,7 @@
 						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
 					</div> 
 				<% end %>
-                <% if !@user.lastname4.empty? %>
+                <% if !@user.lastname4.blank? %>
 					<div>
 						<%= f.label 'ceremony', "Will #{@user.firstname4} be coming to the ceremony?" %><br />
 						<%= f.radio_button :ceremony4, 1 %>
@@ -78,7 +78,7 @@
 						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
 					</div> 
 				<% end %>
-                <% if !@user.lastname5.empty? %>
+                <% if !@user.lastname5.blank? %>
 					<div>
 						<%= f.label 'ceremony', "Will #{@user.firstname5} be coming to the ceremony?" %><br />
 						<%= f.radio_button :ceremony5, 1 %>
@@ -94,7 +94,7 @@
 					<%= f.radio_button :reception, 0 %>
 					<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
 				</div>  
-				<% if !@user.lastname2.empty? %>
+				<% if !@user.lastname2.blank? %>
 					<div>
 						<%= f.label 'reception', "Will #{@user.firstname2} be coming to the reception?" %><br />
 						<%= f.radio_button :reception2, 1 %>
@@ -103,7 +103,7 @@
 						<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
 					</div>  
 				<% end %>
-                <% if !@user.lastname3.empty? %>
+                <% if !@user.lastname3.blank? %>
 					<div>
 						<%= f.label 'reception', "Will #{@user.firstname3} be coming to the reception?" %><br />
 						<%= f.radio_button :reception3, 1 %>
@@ -112,7 +112,7 @@
 						<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
 					</div>  
 				<% end %>
-                <% if !@user.lastname4.empty? %>
+                <% if !@user.lastname4.blank? %>
 					<div>
 						<%= f.label 'reception', "Will #{@user.firstname4} be coming to the reception?" %><br />
 						<%= f.radio_button :reception4, 1 %>
@@ -121,7 +121,7 @@
 						<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
 					</div>  
 				<% end %>
-                <% if !@user.lastname5.empty? %>
+                <% if !@user.lastname5.blank? %>
 					<div>
 						<%= f.label 'reception', "Will #{@user.firstname5} be coming to the reception?" %><br />
 						<%= f.radio_button :reception5, 1 %>
