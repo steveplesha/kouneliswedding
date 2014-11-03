@@ -54,6 +54,10 @@ main {
   min-height: 775px;
   }
 
+body {
+  padding-bottom: 50px;
+}
+
 
 section {
   @extend .row;
@@ -123,3 +127,6 @@ a.btn-primary { margin-top: 5px; }
     text-decoration: none;
     background: linear-gradient(#2C7EF8, #112F7A);    
 }
+
+.site-info { margin-bottom: 50px; }
+
