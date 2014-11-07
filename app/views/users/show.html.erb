@@ -28,106 +28,19 @@
 					</div>
 				<% end %>
 				
-				<p class="invite-text">Please join us for a celebration of love, friendship, laughter, and family as<br>Paulina Kounelis<br>and<br>To Be Named<br>join hands in matrimony on<br>January Seventeenth, Two Thousand Fifteen!</p>
+				<p class="invite-text">Please join us for a celebration of love, friendship, laughter, and family as<br>Paulina Kounelis<br>and<br>Joshua Santiago<br>join hands in matrimony on<br>January Seventeenth, Two Thousand Fifteen!</p>
 				<p class="invite-text">New Saint George Romanian Orthodox Church<br>17601 Wentworth Avenue<br>Lansing, Illinois 60438<br>Reception to follow</p>
                 <div class="field">
                     <%= f.label "Number of guests coming with you:", class: "invite-text" %>
-                    <%= f.number_field :numguests, min: 0, class: 'initial-text', id: "numguests" %>
+                    <%= f.number_field :numguests, min: 0, id: "numguests" %>
                     <div id="guestnames">
-                        <%= f.label "Name of guests: ", class: "invite-text" %>
-                        <%= f.text_field :guestnames, placeholder: "ie. John and Jill Smith", class: "initial-text" %>
+                        <%= f.label "Names of guests: ", class: "invite-text" %>
+                        <%= f.text_field :guestnames, placeholder: "ie. John and Jill Smith" %>
                     </div>
                 </div>
-
-				<div class="invite-text">
-					<%= f.label 'ceremony', "Will #{@user.firstname1} be coming to the ceremony?" %><br />
-					<%= f.radio_button :ceremony, 1 %>
-					<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
-					<%= f.radio_button :ceremony, 0 %>
-					<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
-				</div> 
-				<% if !@user.lastname2.blank? %>
-					<div>
-						<%= f.label 'ceremony', "Will #{@user.firstname2} be coming to the ceremony?" %><br />
-						<%= f.radio_button :ceremony2, 1 %>
-						<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
-						<%= f.radio_button :ceremony2, 0 %>
-						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
-					</div> 
-				<% end %>
-                <% if !@user.lastname3.blank? %>
-					<div>
-						<%= f.label 'ceremony', "Will #{@user.firstname3} be coming to the ceremony?" %><br />
-						<%= f.radio_button :ceremony3, 1 %>
-						<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
-						<%= f.radio_button :ceremony3, 0 %>
-						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
-					</div> 
-				<% end %>
-                <% if !@user.lastname4.blank? %>
-					<div>
-						<%= f.label 'ceremony', "Will #{@user.firstname4} be coming to the ceremony?" %><br />
-						<%= f.radio_button :ceremony4, 1 %>
-						<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
-						<%= f.radio_button :ceremony4, 0 %>
-						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
-					</div> 
-				<% end %>
-                <% if !@user.lastname5.blank? %>
-					<div>
-						<%= f.label 'ceremony', "Will #{@user.firstname5} be coming to the ceremony?" %><br />
-						<%= f.radio_button :ceremony5, 1 %>
-						<%= label :ceremony_1, "Absolutely", class: 'radiolabel' %>
-						<%= f.radio_button :ceremony5, 0 %>
-						<%= label :ceremony_0, "Can't make it", class: 'radiolabel' %>
-					</div> 
-				<% end %>
-				<div>
-					<%= f.label 'reception', "Will #{@user.firstname1} be coming to the reception?" %><br />
-					<%= f.radio_button :reception, 1 %>
-					<%= label :reception_1, "Absolutely", class: 'radiolabel' %>
-					<%= f.radio_button :reception, 0 %>
-					<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
-				</div>  
-				<% if !@user.lastname2.blank? %>
-					<div>
-						<%= f.label 'reception', "Will #{@user.firstname2} be coming to the reception?" %><br />
-						<%= f.radio_button :reception2, 1 %>
-						<%= label :reception_1, "Absolutely", class: 'radiolabel' %>
-						<%= f.radio_button :reception2, 0 %>
-						<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
-					</div>  
-				<% end %>
-                <% if !@user.lastname3.blank? %>
-					<div>
-						<%= f.label 'reception', "Will #{@user.firstname3} be coming to the reception?" %><br />
-						<%= f.radio_button :reception3, 1 %>
-						<%= label :reception_1, "Absolutely", class: 'radiolabel' %>
-						<%= f.radio_button :reception3, 0 %>
-						<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
-					</div>  
-				<% end %>
-                <% if !@user.lastname4.blank? %>
-					<div>
-						<%= f.label 'reception', "Will #{@user.firstname4} be coming to the reception?" %><br />
-						<%= f.radio_button :reception4, 1 %>
-						<%= label :reception_1, "Absolutely", class: 'radiolabel' %>
-						<%= f.radio_button :reception4, 0 %>
-						<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
-					</div>  
-				<% end %>
-                <% if !@user.lastname5.blank? %>
-					<div>
-						<%= f.label 'reception', "Will #{@user.firstname5} be coming to the reception?" %><br />
-						<%= f.radio_button :reception5, 1 %>
-						<%= label :reception_1, "Absolutely", class: 'radiolabel' %>
-						<%= f.radio_button :reception5, 0 %>
-						<%= label :reception_0, "Can't make it", class: 'radiolabel' %>
-					</div>  
-				<% end %>
 				<%= f.hidden_field :respond, value: true %>
 				<div class="form-actions">
-					<%= f.submit 'Click to RSVP', class:'rsvp-btn submit initial-text' %>
+					<%= f.submit 'Click to RSVP', class:'rsvp-btn submit' %>
 				</div>
 			<% end %>			
 		</div>

@@ -45,13 +45,6 @@ img {
 
 main {
   @extend .container;
-  background-color: #efe8d6;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-image: url("../assets/tree-bkg2.png");
-  background-size: 100%;
-  width: 100%;
-  min-height: 775px;
   }
 
 body {
@@ -75,11 +68,9 @@ input[type="text"],
 input[type="number"],
 input[type="password"] { padding-left: 10px; }
 
-.invite-text { font-family: 'Dancing Script', cursive; }
+.invite-text { font-family: 'Lora', serif; }
 
 p.invite-text { font-size: 20px; }
-
-.initial-text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
  
 #guest-admin input[type="text"],
 #guest-admin input[type="number"] {
