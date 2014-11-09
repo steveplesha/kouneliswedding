@@ -32,27 +32,28 @@
                     request the honour of your presence<br>
                     at the marriage of their daughter<br>
                     <%= image_tag("big-divider.png", class:'pad-top') %><br>
-                    Paulina Ann<br>
+                    <span class='name-font'>Paulina Ann<br>
                     &<br>
-                    Joshua Nicholas<br>
+                    Joshua Nicholas</span><br>
                     <%= image_tag("big-divider-upside-down.png", class: "pad-top") %><br>
                     son of Nick Santiago and Heidi Strom<br>
-                    Saturday<br>
+                    <span class="day-font">Saturday</span><br>
                     the Seventeenth of January<br>
-                    2015<br>
+                    <%= image_tag('heart-left.png', class: 'inline-img') %><span class='year-font'>2015</span><%= image_tag('heart-right.png', class: 'inline-img') %><br>
                     at three o'clock in the afternoon<br>
                     New St. George Romanian Orthodox Church<br>
-                    17601 Wentworth Ave.<br>
+                    <strong class="address-font">17601 Wentworth Ave.</strong><br>
                     Lansing, Illinois<br>
+                    <%= image_tag("small-divider.png") %><br>
                     The pleasure of your company is requested<br>
                     at the reception<br>
                     at six o'clock in the evening<br>
                     Halls of St. George<br>
-                    905 East Joliet Street<br>
+                    <strong class="address-font">905 East Joliet Street</strong><br>
                     Schererville, Indiana
                 </p>
                 <div class="field">
-                    <%= f.label "Number of guests coming with you:", class: "invite-text" %>
+                    <%= f.label "Number of guests in your party:", class: "invite-text" %>
                     <%= f.number_field :numguests, min: 0, id: "numguests" %>
                     <div id="guestnames">
                         <%= f.label "Names of guests: ", class: "invite-text" %>

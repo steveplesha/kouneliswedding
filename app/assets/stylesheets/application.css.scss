@@ -27,12 +27,36 @@
 
 .center-text { text-align: center; }
 	
-.login { margin-top: 120px; }
+.login { margin-top: 25px; }
 
 .right { float: right; }
 
 .pad-bottom { padding-bottom: 30px; }
+
 .pad-top { padding-top: 30px; }
+
+.name-font { 
+    font-family: 'Pinyon Script', cursive; 
+    font-size: 75px;
+    text-transform: none;
+    line-height: 63px;
+}
+
+.day-font { 
+    font-size: 45px;
+    letter-spacing: 6px;
+}
+
+.year-font { 
+    font-size: 35px; 
+    margin: 0 20px;
+    letter-spacing: 15px;
+}
+
+.address-font {
+    font-size: 23px;
+    letter-spacing: 5px;
+}
 
 .radiolabel { margin-bottom: 3rem; }
 	
