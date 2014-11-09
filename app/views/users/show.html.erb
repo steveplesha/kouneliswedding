@@ -2,9 +2,9 @@
     <%= button_to "Admin", users_path, class: 'admin-btn', method: :get %>
 <% end %>
 <div class="pad-bottom container-fluid">
-    <div class="row-fluid">
-        
-		<div class= "invite-text center-text col col-md-6 col-md-offset-3">
+    <div class="row-fluid pad-top">
+        <%= image_tag("small-divider.png") %>
+		<div class= "invite-text center-text uppercase">
 			<h1 class="invite-text">
 				<% if @user.lastname1 == @user.lastname2 %>
 					<%= "Dear #{@user.firstname1} and #{@user.firstname2} #{@user.lastname1}," %>
@@ -28,8 +28,29 @@
 					</div>
 				<% end %>
 				
-				<p class="invite-text">Please join us for a celebration of love, friendship, laughter, and family as<br>Paulina Kounelis<br>and<br>Joshua Santiago<br>join hands in matrimony on<br>January Seventeenth, Two Thousand Fifteen!</p>
-				<p class="invite-text">New Saint George Romanian Orthodox Church<br>17601 Wentworth Avenue<br>Lansing, Illinois 60438<br>Reception to follow</p>
+				<p class="invite-text">Teddy and Susan Kounelis<br>
+                    request the honour of your presence<br>
+                    at the marriage of their daughter<br>
+                    <%= image_tag("big-divider.png", class:'pad-top') %><br>
+                    Paulina Ann<br>
+                    &<br>
+                    Joshua Nicholas<br>
+                    <%= image_tag("big-divider-upside-down.png", class: "pad-top") %><br>
+                    son of Nick Santiago and Heidi Strom<br>
+                    Saturday<br>
+                    the Seventeenth of January<br>
+                    2015<br>
+                    at three o'clock in the afternoon<br>
+                    New St. George Romanian Orthodox Church<br>
+                    17601 Wentworth Ave.<br>
+                    Lansing, Illinois<br>
+                    The pleasure of your company is requested<br>
+                    at the reception<br>
+                    at six o'clock in the evening<br>
+                    Halls of St. George<br>
+                    905 East Joliet Street<br>
+                    Schererville, Indiana
+                </p>
                 <div class="field">
                     <%= f.label "Number of guests coming with you:", class: "invite-text" %>
                     <%= f.number_field :numguests, min: 0, id: "numguests" %>

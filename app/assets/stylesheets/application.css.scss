@@ -32,6 +32,7 @@
 .right { float: right; }
 
 .pad-bottom { padding-bottom: 30px; }
+.pad-top { padding-top: 30px; }
 
 .radiolabel { margin-bottom: 3rem; }
 	
@@ -122,8 +123,3 @@ div.comment { margin-bottom: 5px; }
 /* Media Queries
 **************************************/
 
-@media screen and (min-width: 768px) {
-	.center-text {
-		padding: 2em 0 0 4em;
-	}
-}
