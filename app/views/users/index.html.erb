@@ -17,27 +17,13 @@
 		<th>First</th>
 		<th>Last</th>
 		<th>First</th>
-		<th>Last</th>
-		<th>First</th>
-		<th>Last</th>
-		<th>First</th>
-		<th>Last</th>    
-		<th>First</th>
-		<th>Last</th>           
+		<th>Last</th>         
 		<th>Username</th>
 		<th>Guests Bringing</th>
         <th>Guest Names</th>
-		<th>RSVP'd</th>
-		<th>Ceremony</th>
-		<th>Ceremony2</th>
-		<th>Ceremony3</th>
-        <th>Ceremony4</th>
-		<th>Ceremony5</th>          
+		<th>RSVP'd</th>        
 		<th>Reception</th>
-		<th>Reception2</th>
-		<th>Reception3</th>
-		<th>Reception4</th>
-		<th>Reception5</th>          
+       
 		<th>Role</th>
 	  </tr>
 	  
@@ -46,27 +32,12 @@
 		<td><%= link_to user.firstname1, edit_user_path(user) %></td>
 		<td><%= user.lastname1 %></td>
 		<td><%= user.firstname2 %></td>
-		<td><%= user.lastname2 %></td>
-		<td><%= user.firstname3 %></td>          
-		<td><%= user.lastname3 %></td>
-		<td><%= user.firstname4 %></td>
-		<td><%= user.lastname4 %></td>  
-		<td><%= user.firstname5 %></td>
-		<td><%= user.lastname5 %></td>            
+		<td><%= user.lastname2 %></td> 
 		<td><%= user.username %></td>
 		<td><%= user.numguests %></td>
         <td><%= user.guestnames %></td>
 		<td><%= user.respond %></td>
-		<td><%= user.ceremony %></td>
-		<td><%= user.reception %></td>
-		<td><%= user.ceremony2 %></td>
-		<td><%= user.reception2 %></td>
-		<td><%= user.ceremony3 %></td>
-		<td><%= user.reception3 %></td>	
-		<td><%= user.ceremony4 %></td>
-		<td><%= user.reception4 %></td>	
-		<td><%= user.ceremony5 %></td>
-		<td><%= user.reception5 %></td>	          
+		<td><%= user.reception %></td>       
 		<td><%= user.role %></td>
 	  </tr>
 	<% end %>
