@@ -20,39 +20,7 @@
             <div class="field">
                 <%= f.label "LastName1" %>
                 <%= f.text_field :lastname1, class: "right" %>
-            </div>
-            <div class="field">
-                <%= f.label "FirstName2" %>
-                <%= f.text_field :firstname2, class: "right" %>
-            </div>
-            <div class="field">
-                <%= f.label "LastName2" %>
-                <%= f.text_field :lastname2, class: "right" %>
-            </div>
-            <div class="field">
-                <%= f.label "FirstName3" %>
-                <%= f.text_field :firstname3, class: "right" %>
-            </div>
-            <div class="field">
-                <%= f.label "LastName3" %>
-                <%= f.text_field :lastname3, class: "right" %>
-            </div>  
-            <div class="field">
-                <%= f.label "FirstName4" %>
-                <%= f.text_field :firstname4, class: "right" %>
-            </div>
-            <div class="field">
-                <%= f.label "LastName4" %>
-                <%= f.text_field :lastname4, class: "right" %>
-            </div>  
-            <div class="field">
-                <%= f.label "FirstName5" %>
-                <%= f.text_field :firstname5, class: "right" %>
-            </div>
-            <div class="field">
-                <%= f.label "LastName5" %>
-                <%= f.text_field :lastname5, class: "right" %>
-            </div>              
+            </div>             
             <div class="field">
                 <%= f.label "Username" %>
                 <%= f.text_field :username, class: "right" %>
@@ -61,10 +29,6 @@
                 <%= f.label "Password" %>
                 <%= f.text_field :password, class: "right" %>
             </div>   
-            <div class="field">
-                <%= f.label "Maxguests" %>
-                <%= f.number_field :maxguests, class: "right" %>
-            </div>
             <div class="field">
                 <%= f.label "Numguests" %>
                 <%= f.number_field :numguests, class: "right" %>
@@ -80,93 +44,14 @@
                     <%= f.label :respond_1, "Yes", class: 'radiolabel' %>
                     <%= f.radio_button :respond, false %>
                     <%= f.label :respond_0, "No", class: 'radiolabel' %>
-                </div>
-				<div>
-					<%= f.label 'ceremony', "Will #{@user.firstname1} be coming to the ceremony?" %><br />
-					<%= f.radio_button :ceremony, 1 %>
-					<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
-					<%= f.radio_button :ceremony, 0 %>
-					<%= label :ceremony_0, "No", class: 'radiolabel' %>
-				</div> 
-				<% if !@user.lastname2.blank? %>
-					<div>
-						<%= f.label 'ceremony', "Will #{@user.firstname2} be coming to the ceremony?" %><br />
-						<%= f.radio_button :ceremony2, 1 %>
-						<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
-						<%= f.radio_button :ceremony2, 0 %>
-						<%= label :ceremony_0, "No", class: 'radiolabel' %>
-					</div> 
-				<% end %>
-                <% if !@user.lastname3.blank? %>
-					<div>
-						<%= f.label 'ceremony', "Will #{@user.firstname3} be coming to the ceremony?" %><br />
-						<%= f.radio_button :ceremony3, 1 %>
-						<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
-						<%= f.radio_button :ceremony3, 0 %>
-						<%= label :ceremony_0, "No", class: 'radiolabel' %>
-					</div> 
-				<% end %>
-                <% if !@user.lastname4.blank? %>
-					<div>
-						<%= f.label 'ceremony', "Will #{@user.firstname4} be coming to the ceremony?" %><br />
-						<%= f.radio_button :ceremony4, 1 %>
-						<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
-						<%= f.radio_button :ceremony4, 0 %>
-						<%= label :ceremony_0, "No", class: 'radiolabel' %>
-					</div> 
-				<% end %>                
-                <% if !@user.lastname5.blank? %>
-					<div>
-						<%= f.label 'ceremony', "Will #{@user.firstname5} be coming to the ceremony?" %><br />
-						<%= f.radio_button :ceremony5, 1 %>
-						<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
-						<%= f.radio_button :ceremony5, 0 %>
-						<%= label :ceremony_0, "No", class: 'radiolabel' %>
-					</div> 
-				<% end %>                
+                </div>                          
 				<div>
 					<%= f.label 'reception', "Will #{@user.firstname1} be coming to the reception?" %><br />
 					<%= f.radio_button :reception, 1 %>
 					<%= label :reception_1, "Yes", class: 'radiolabel' %>
 					<%= f.radio_button :reception, 0 %>
 					<%= label :reception_0, "No", class: 'radiolabel' %>
-				</div>  
-				<% if !@user.lastname2.blank? %>
-					<div>
-						<%= f.label 'reception', "Will #{@user.firstname2} be coming to the reception?" %><br />
-						<%= f.radio_button :reception2, 1 %>
-						<%= label :reception_1, "Yes", class: 'radiolabel' %>
-						<%= f.radio_button :reception2, 0 %>
-						<%= label :reception_0, "No", class: 'radiolabel' %>
-					</div>  
-				<% end %>	
-                <% if !@user.lastname3.blank? %>
-					<div>
-						<%= f.label 'reception', "Will #{@user.firstname3} be coming to the reception?" %><br />
-						<%= f.radio_button :reception3, 1 %>
-						<%= label :reception_1, "Yes", class: 'radiolabel' %>
-						<%= f.radio_button :reception3, 0 %>
-						<%= label :reception_0, "No", class: 'radiolabel' %>
-					</div>  
-                <% end %>
-                <% if !@user.lastname4.blank? %>
-					<div>
-						<%= f.label 'reception', "Will #{@user.firstname4} be coming to the reception?" %><br />
-						<%= f.radio_button :reception4, 1 %>
-						<%= label :reception_1, "Yes", class: 'radiolabel' %>
-						<%= f.radio_button :reception4, 0 %>
-						<%= label :reception_0, "No", class: 'radiolabel' %>
-					</div>  
-				<% end %>	
-				<% if !@user.lastname5.blank? %>
-					<div>
-						<%= f.label 'reception', "Will #{@user.firstname5} be coming to the reception?" %><br />
-						<%= f.radio_button :reception5, 1 %>
-						<%= label :reception_1, "Yes", class: 'radiolabel' %>
-						<%= f.radio_button :reception5, 0 %>
-						<%= label :reception_0, "No", class: 'radiolabel' %>
-					</div>  
-				<% end %>		
+				</div>  	
             </div>
             <div class="field">
                 <%= f.label "Role" %>

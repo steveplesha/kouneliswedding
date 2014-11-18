@@ -1,29 +1,10 @@
 class User < ActiveRecord::Base
   attr_accessible :firstname1, 
-				  :firstname2, 
-				  :firstname3,
-				  :firstname4,
-				  :firstname5,    
-				  :lastname1, 
-				  :lastname2, 
-				  :lastname3,
-				  :lastname4,
-				  :lastname5,    
-				  :maxguests, 
 				  :numguests, 
                   :guestnames,
 				  :username, 
-				  :password, 
-				  :ceremony, 
-				  :ceremony2,
-				  :ceremony3,
-				  :ceremony4,
-				  :ceremony5,                        
-				  :reception,
-				  :reception2,
-				  :reception3,
-				  :reception4,
-				  :reception5,    
+				  :password,                       
+				  :reception, 
 				  :respond,
 				  :comment,
 				  :role
@@ -40,7 +21,7 @@ class User < ActiveRecord::Base
     end
   end
   
-  def encrypt_password
+  def encrypt_password      
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
@@ -52,7 +33,7 @@ class User < ActiveRecord::Base
 	header = spreadsheet.row(1)
 	(2..spreadsheet.last_row).each do |i|
 		row = Hash[[header, spreadsheet.row(i)].transpose]
-		user = find_by_id(row['id']) || new
+		user = find_by_username(row['username']) || new
 		user.attributes = row.to_hash.slice(*accessible_attributes)
 		user.save!
 	end
@@ -60,7 +41,7 @@ class User < ActiveRecord::Base
   
   def self.open_spreadsheet(file)
 	  case File.extname(file.original_filename)
-		  when ".csv" then Roo::DSV.new(file.path, nil, :ignore)
+		  when ".csv" then Roo::Csv.new(file.path, nil, :ignore)
 		  when ".xls" then Roo::Excel.new(file.path, nil, :ignore)
 		  when ".xlsx" then Roo::Excelx.new(file.path, nil, :ignore)
 		  when "gdoc" then Roo::Google.new(file.path, nil, :ignore)
