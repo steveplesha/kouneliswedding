@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :firstname1, 
 				  :numguests, 
-                  :guestnames,
 				  :username, 
 				  :password,                       
 				  :reception, 

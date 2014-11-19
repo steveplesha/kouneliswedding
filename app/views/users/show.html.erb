@@ -47,13 +47,11 @@
                     Schererville, Indiana
                 </p>
 				<div>
-					<%= f.label 'ceremony', "Will you be coming to the ceremony?" %>
-					<%= f.radio_button :ceremony, 'Yes' %>
-					<%= label :ceremony_1, "Yes", class: 'radiolabel' %>
-					<%= f.radio_button :ceremony, 'No' %>
-					<%= label :ceremony_0, "No", class: 'radiolabel' %><br>
-                    <%= f.label "Names of guests: ", class: "invite-text" %>
-                    <%= f.text_field :guestnames, placeholder: "ie. John and Jill Smith" %><br>
+					<%= f.label 'reception', "Will you be coming to the ceremony?" %>
+					<%= f.radio_button :reception, 'Yes' %>
+					<%= label :reception_1, "Yes", class: 'radiolabel' %>
+					<%= f.radio_button :reception, 'No' %>
+					<%= label :reception_0, "No", class: 'radiolabel' %><br>
                     <%= f.label "Number of guests in your party:", class: "invite-text" %>
                     <%= f.number_field :numguests, min: 0, id: "numguests", class: "input-small" %>
                 </div>

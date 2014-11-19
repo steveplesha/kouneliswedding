@@ -30,10 +30,6 @@
                 <%= f.number_field :numguests, class: "right" %>
             </div>
             <div class="field">
-                <%= f.label "Guest names" %>
-                <%= f.text_field :guestnames, class: "right" %>
-            </div>
-            <div class="field">
                 <div>
                     <%= f.label "RSVP'd" %>
                     <%= f.radio_button :respond, true %>
@@ -43,9 +39,9 @@
                 </div>                          
 				<div>
 					<%= f.label 'reception', "Will #{@user.firstname1} be coming to the reception?" %><br />
-					<%= f.radio_button :reception, 1 %>
+					<%= f.radio_button :reception, 'Yes' %>
 					<%= label :reception_1, "Yes", class: 'radiolabel' %>
-					<%= f.radio_button :reception, 0 %>
+					<%= f.radio_button :reception, 'No' %>
 					<%= label :reception_0, "No", class: 'radiolabel' %>
 				</div>  	
             </div>
