@@ -6,13 +6,7 @@
         <%= image_tag("small-divider.png") %>
 		<div class= "invite-text center-text uppercase">
 			<h1 class="invite-text">
-				<% if @user.lastname1 == @user.lastname2 %>
-					<%= "Dear #{@user.firstname1} and #{@user.firstname2} #{@user.lastname1}," %>
-				<% elsif @user.firstname2.blank? %>
-					<%= "Dear #{@user.firstname1} #{@user.lastname1}," %>
-				<% else %>
-					<%= "Dear #{@user.firstname1} #{@user.lastname1} and #{@user.firstname2} #{@user.lastname2}," %>
-				<% end %>
+                <%= "Dear #{@user.firstname1}," %>
 			</h1>  
   
 			<%= form_for @user do |f| %>
@@ -33,7 +27,7 @@
                     at the marriage of their daughter<br>
                     <%= image_tag("big-divider.png", class:'pad-top') %><br>
                     <span class='name-font'>Paulina Ann<br>
-                    &<br>
+                    to<br>
                     Joshua Nicholas</span><br>
                     <%= image_tag("big-divider-upside-down.png", class: "pad-top") %><br>
                     son of Nick Santiago and Heidi Strom<br>
