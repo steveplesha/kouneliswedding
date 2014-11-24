@@ -48,9 +48,9 @@
                 </p>
 				<div>
 					<%= f.label 'reception', "Will you be coming to the reception?" %>
-					<%= f.radio_button :reception, 'Yes' %>
+					<%= f.radio_button :reception, true %>
 					<%= label :reception_1, "Yes", class: 'radiolabel' %>
-					<%= f.radio_button :reception, 'No' %>
+					<%= f.radio_button :reception, false %>
 					<%= label :reception_0, "No", class: 'radiolabel' %><br>
                     <%= f.label "Number of guests in your party:", class: "invite-text" %>
                     <%= f.number_field :numguests, min: 0, id: "numguests", class: "input-small" %>

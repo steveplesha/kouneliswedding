@@ -39,9 +39,9 @@
                 </div>                          
 				<div>
 					<%= f.label 'reception', "Is #{@user.firstname1} coming to the reception?" %><br />
-					<%= f.radio_button :reception, 'Yes' %>
+					<%= f.radio_button :reception, true %>
 					<%= label :reception_1, "Yes", class: 'radiolabel' %>
-					<%= f.radio_button :reception, 'No' %>
+					<%= f.radio_button :reception, false %>
 					<%= label :reception_0, "No", class: 'radiolabel' %>
 				</div>  	
             </div>

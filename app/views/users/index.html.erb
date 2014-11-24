@@ -26,9 +26,15 @@
 	  <tr>
 		<td><%= link_to user.firstname1, edit_user_path(user) %></td>
 		<td><%= user.username %></td>
-		<td><%= user.reception %></td>  
+		<td><% if user.reception %>
+            <%= user.reception ? "Yes" : "No" %>
+            <% end %>
+        </td>  
         <td><%= user.numguests %></td>
-		<td><%= user.respond %></td>     
+		<td><% if user.respond %>
+            <%= user.respond ? "Yes" : "No" %>
+            <% end %>  
+        </td>     
 		<td><%= user.role %></td>
 	  </tr>
 	<% end %>
