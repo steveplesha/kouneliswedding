@@ -27,7 +27,7 @@
 		<td><%= link_to user.firstname1, edit_user_path(user) %></td>
 		<td><%= user.username %></td>
 		<td><% if !user.reception.blank? %>
-                <% if (user.reception == "true") %>
+                <% if (user.reception == true) %>
                     Yes
                 <% else %>
                     No
