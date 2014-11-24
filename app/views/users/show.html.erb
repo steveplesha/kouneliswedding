@@ -47,7 +47,7 @@
                     Schererville, Indiana
                 </p>
 				<div>
-					<%= f.label 'reception', "Will you be coming to the ceremony?" %>
+					<%= f.label 'reception', "Will you be coming to the reception?" %>
 					<%= f.radio_button :reception, 'Yes' %>
 					<%= label :reception_1, "Yes", class: 'radiolabel' %>
 					<%= f.radio_button :reception, 'No' %>
@@ -55,7 +55,7 @@
                     <%= f.label "Number of guests in your party:", class: "invite-text" %>
                     <%= f.number_field :numguests, min: 0, id: "numguests", class: "input-small" %>
                 </div>
-				<%= f.hidden_field :respond, value: true %>
+				<%= f.hidden_field :respond, value: 'Yes' %>
 				<div class="form-actions">
 					<%= f.submit 'Click to RSVP', class:'rsvp-btn submit' %>
 				</div>
