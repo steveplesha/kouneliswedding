@@ -2,7 +2,7 @@
 <div id="index">
 
 	<h1>Guests</h1>
-
+    
 	<div id='import'>
         <%= link_to 'Add user', new_user_path, class: 'btn btn-primary' %>
 		<h3>Import Guest Info</h3>
@@ -11,13 +11,15 @@
 		  <%= submit_tag "Import", id: 'importsubmit' %>
 		<% end %>
 	</div>
+    
+    <h3>Confirmed guests so far: <%= User.sum(:numguests) %></h3> 
 
 	<table class='table table-striped table-condensed'>
 	  <tr>
 		<th>Name (click name to edit)</th>       
 		<th>Username</th>
 		<th>Attending?</th>          
-		<th># Guests Bringing</th>
+		<th># of Guests</th>
 		<th>RSVP'd</th>        
 		<th>Role</th>
 	  </tr>
