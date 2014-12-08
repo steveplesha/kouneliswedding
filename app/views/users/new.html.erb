@@ -20,9 +20,13 @@
         <%= f.label :password %><br>
         <%= f.password_field :password %>
       </p>
-      <p >
-        <%= f.label :firstname1 %><br>
+      <p>
+        <%= f.label "Name" %><br>
         <%= f.text_field :firstname1 %><br>
+      </p>
+      <p>
+          <%= f.label "# of Guests" %><br>
+          <%= f.number_field :numguests %>
       </p>
       <p>
         <%= f.label :role %><br>
